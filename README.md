@@ -21,7 +21,7 @@ This will setup a new laptop for software development.
 ```
  $ git clone https://github.com/genomics-geek/setup-macbook-playbook.git
  $ cd setup-macbook-playbook
- $ ansible-playbook main.yml -i hosts -l local
+ $ ansible-playbook setup.yml -i hosts -l local
 ```
 
 ### What this includes:
