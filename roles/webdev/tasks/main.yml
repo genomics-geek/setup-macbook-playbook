@@ -33,13 +33,15 @@
   tags:
     - webdev
 
-- name: Add JS global packages
-  yarn:
-    name: "{{ item }}"
-    global: yes
-    state: present
-  with_items:
-    - "create-react-app"
-    - "prettier"
-  tags:
-    - webdev
+# NOTE: Currently not supported.  Yarn expects yarn add --global, but Ansible is trying
+# to use yarn global install
+# - name: Add JS global packages
+#   yarn:
+#     name: "{{ item }}"
+#     global: yes
+#     state: present
+#   with_items:
+#     - "create-react-app"
+#     - "prettier"
+#   tags:
+#     - webdev
