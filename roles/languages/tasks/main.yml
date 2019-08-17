@@ -1,25 +1,25 @@
 ---
 - name: install erlang, scala, go, nim, and python3
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "erlang",
+      "golang",
+      "scala",
+      "sbt",
+      "nim",
+      "python3",
+    ]
     state: present
-  with_items:
-    - "erlang"
-    - "golang"
-    - "scala"
-    - "sbt"
-    - "nim"
-    - "python3"
   tags:
     - languages
 
 - name: install perl packages
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "perl-build",
+      "plenv",
+    ]
     state: present
-  with_items:
-    - "perl-build"
-    - "plenv"
   tags:
     - languages
 

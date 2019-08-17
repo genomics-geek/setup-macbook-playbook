@@ -1,35 +1,35 @@
 ---
 - name: install helpful packages
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "nginx",
+      "graphviz",
+    ]
     state: present
-  with_items:
-    - "nginx"
-    - "graphviz"
   tags:
     - webdev
 
 - name: install python packages
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "pipenv",
+      "pyenv",
+      "pyenv-virtualenv",
+      "pyenv-virtualenvwrapper",
+      "autopep8",
+      "flake8",
+    ]
     state: present
-  with_items:
-    - "pipenv"
-    - "pyenv"
-    - "pyenv-virtualenv"
-    - "pyenv-virtualenvwrapper"
-    - "autopep8"
-    - "flake8"
   tags:
     - webdev
 
 - name: install Node and yarn
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "node@12",
+      "yarn",
+    ]
     state: present
-  with_items:
-    - "node@12"
-    - "yarn"
   tags:
     - webdev
 

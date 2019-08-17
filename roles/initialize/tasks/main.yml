@@ -17,23 +17,23 @@
 
 - name: install core packages
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "wget",
+      "gcc",
+      "openssl",
+      "cmake",
+      "git",
+      "git-lfs",
+      "moreutils",
+      "findutils",
+      "gnupg",
+      "grep",
+      "screen",
+      "pigz",
+      "tree",
+      "heroku",
+    ]
     state: present
-  with_items:
-    - "wget"
-    - "gcc"
-    - "openssl"
-    - "cmake"
-    - "git"
-    - "git-lfs"
-    - "moreutils"
-    - "findutils"
-    - "gnupg"
-    - "grep"
-    - "screen"
-    - "pigz"
-    - "tree"
-    - "heroku"
   tags:
     - initialize
 

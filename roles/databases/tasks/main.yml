@@ -1,12 +1,12 @@
 ---
 - name: install databases
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "postgresql",
+      "mysql",
+      "redis",
+      "rabbitmq",
+    ]
     state: present
-  with_items:
-    - "postgresql"
-    - "mysql"
-    - "redis"
-    - "rabbitmq"
   tags:
     - databases
