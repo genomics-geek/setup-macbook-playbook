@@ -11,6 +11,7 @@
   with_items:
     - "homebrew/services"
     - "caskroom/cask"
+    - "heroku/brew"
   tags:
     - initialize
 
@@ -32,6 +33,7 @@
     - "screen"
     - "pigz"
     - "tree"
+    - "heroku"
   tags:
     - initialize
 
