@@ -41,10 +41,10 @@
 
 - name: install Java packages
   homebrew:
-    name: "{{ item }}"
+    name: [
+      "maven",
+      "jenv",
+    ]
     state: present
-  with_items:
-    - "maven"
-    - "jenv"
   tags:
     - languages
