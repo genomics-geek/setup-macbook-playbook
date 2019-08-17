@@ -7,7 +7,14 @@
     - "adoptopenjdk/openjdk"
   tags:
     - languages
-    
+
+- name: install cask adoptopenjdk
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "adoptopenjdk"
+
 - name: install erlang, scala, go, nim, and python3
   homebrew:
     name: [
