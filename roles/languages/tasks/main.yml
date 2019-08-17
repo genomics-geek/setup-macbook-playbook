@@ -12,6 +12,7 @@
   homebrew_cask:
     name: "{{ item }}"
     state: present
+    install_options: "appdir=$HOME/Applications/"
   with_items:
     - "adoptopenjdk"
 

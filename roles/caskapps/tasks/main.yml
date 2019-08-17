@@ -1,12 +1,4 @@
 ---
-- name: Create directory for installed apps
-  file:
-    path: "{{ lookup('env','HOME') }}/Applications"
-    state: directory
-    mode: 0775
-  tags:
-    - caskapps
-
 - name: install cask apps
   homebrew_cask:
     name: "{{ item }}"
