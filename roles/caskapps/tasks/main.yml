@@ -23,5 +23,6 @@
     - "google-chrome"
     - "spotify"
     - "spotify-notifications"
+    - "dbvisualizer"
   tags:
     - caskapps
