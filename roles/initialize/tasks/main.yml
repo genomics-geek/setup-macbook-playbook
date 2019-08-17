@@ -46,7 +46,6 @@
 
 - name: Pull down dotfiles
   git:
-    bare: yes
     force: yes
     accept_hostkey: yes
     repo: "https://github.com/genomics-geek/dotfiles.git"
