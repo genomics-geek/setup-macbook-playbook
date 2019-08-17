@@ -1,0 +1,27 @@
+---
+- name: Create directory for installed apps
+  file:
+    path: "{{ lookup('env','HOME') }}/Applications"
+    state: directory
+    mode: 0775
+  tags:
+    - caskapps
+
+- name: install cask apps
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+    install_options: "appdir=$HOME/Applications/"
+  with_items:
+    - "slack"
+    - "skype"
+    - "atom"
+    - "vscodium"
+    - "postman"
+    - "github-desktop"
+    - "google-drive"
+    - "google-chrome"
+    - "spotify"
+    - "spotify-notifications"
+  tags:
+    - caskapps

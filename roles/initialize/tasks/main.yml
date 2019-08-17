@@ -1,0 +1,46 @@
+---
+- name: install homebrew
+  shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  tags:
+    - initialize
+
+- name: install homebrew taps
+  homebrew_tap:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "homebrew/services"
+    - "caskroom/cask"
+  tags:
+    - initialize
+
+- name: install core packages
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "wget"
+    - "gcc"
+    - "openssl"
+    - "cmake"
+    - "git"
+  tags:
+    - initialize
+
+- name: Generate SSH Key
+  shell: "yes y | ssh-keygen -t rsa -b 4096 -C '{{ inventory_hostname }}' -N '' -f $HOME/.ssh/id_rsa"
+  args:
+    warn: false
+  tags:
+    - initialize
+
+- name: Pull down dotfiles
+  git:
+    bare: yes
+    force: yes
+    accept_hostkey: yes
+    repo: "https://github.com/genomics-geek/dotfiles.git"
+    dest: "{{ lookup('env','HOME') }}"
+    version: "master"
+  tags:
+    - initialize

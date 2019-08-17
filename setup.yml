@@ -1,0 +1,11 @@
+---
+- name: Setup MacBook for a rich development environment
+  hosts: all
+
+  roles:
+    - initialize
+    - terminal
+    - languages
+    - databases
+    - webdev
+    - caskapps

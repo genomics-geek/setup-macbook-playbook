@@ -1,0 +1,45 @@
+---
+- name: install helpful packages
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "nginx"
+    - "graphviz"
+  tags:
+    - webdev
+
+- name: install python packages
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "pipenv"
+    - "pyenv"
+    - "pyenv-virtualenv"
+    - "pyenv-virtualenvwrapper"
+    - "autopep8"
+    - "flake8"
+  tags:
+    - webdev
+
+- name: install Node and yarn
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "node@12"
+    - "yarn"
+  tags:
+    - webdev
+
+- name: Add JS global packages
+  yarn:
+    name: "{{ item }}"
+    global: yes
+    state: present
+  with_items:
+    - "create-react-app"
+    - "prettier"
+  tags:
+    - webdev
