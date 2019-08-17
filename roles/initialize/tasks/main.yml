@@ -50,7 +50,12 @@
     force: yes
     accept_hostkey: yes
     repo: "https://github.com/genomics-geek/dotfiles.git"
-    dest: "{{ lookup('env','HOME') }}"
+    dest: "{{ lookup('env','HOME') }}/.dotfiles"
     version: "master"
+  tags:
+    - initialize
+
+- name: initialize dot files
+  shell: "$HOME/.dotfiles/setup.sh"
   tags:
     - initialize
