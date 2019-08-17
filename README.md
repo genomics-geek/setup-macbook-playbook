@@ -19,7 +19,9 @@ This will setup a new laptop for software development.
 ##### 2. Run the ansible playbook:
 
 ```
- $ ansible-playbook main.yml -i hosts -l local 
+ $ git clone https://github.com/genomics-geek/setup-macbook-playbook.git
+ $ cd setup-macbook-playbook
+ $ ansible-playbook main.yml -i hosts -l local
 ```
 
 ### What this includes:
