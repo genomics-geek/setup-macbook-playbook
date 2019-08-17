@@ -5,6 +5,7 @@
       "postgresql",
       "mysql",
       "redis",
+      "memcached",
       "rabbitmq",
     ]
     state: present
