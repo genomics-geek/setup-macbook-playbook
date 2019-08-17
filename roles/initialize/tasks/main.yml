@@ -56,5 +56,7 @@
 
 - name: initialize dot files
   shell: "$HOME/.dotfiles/setup.sh"
+  args:
+    chdir: {{ lookup('env','HOME') }}/.dotfiles"
   tags:
     - initialize
