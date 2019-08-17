@@ -24,6 +24,14 @@
     - "openssl"
     - "cmake"
     - "git"
+    - "git-lfs"
+    - "moreutils"
+    - "findutils"
+    - "gnupg"
+    - "grep"
+    - "screen"
+    - "pigz"
+    - "tree"
   tags:
     - initialize
 
