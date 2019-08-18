@@ -20,3 +20,29 @@
     - "lastpass"
   tags:
     - caskapps
+
+- name: install Atom packaages
+  shell: "apm install {{ item }}"
+  with_items:
+    - "language-babel"
+    - "editorconfig"
+    - "linter"
+    - "linter-eslint"
+    - "linter-flake8"
+    - "teletype"
+    - "git-plus"
+    - "highlight-selected"
+    - "file-icons"
+    - "ask-stack"
+    - "autocomplete-python"
+    - "script"
+    - "prettier-atom"
+    - "python-autopep8"
+    - "atom-react"
+    - "react-es7-snippets"
+    - "atom-jest-snippets"
+    - "atom-beautify"
+    - "atom-ternjs"
+    - "one-dark-ui"
+  tags:
+    - caskapps
