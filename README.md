@@ -13,7 +13,8 @@ This will setup a new laptop for software development.
 
 ```
  $ xcode-select --install
- $ pip install ansible==2.8.4
+ $ sudo easy_install pip
+ $ sudo pip install ansible==2.8.4
 ```
 
 ##### 2. Run the ansible playbook:
