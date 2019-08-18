@@ -69,4 +69,15 @@ This will setup a new laptop for software development.
 + PostMan
 + Google Drive
 + Google Chrome
++ Brave browser
 + Spotify
++ Lastpass
+
+#### Atom plugins
+
++ teletype
++ git-plus
++ ask-stack
++ linters for python and JS
++ prettier
++ python-autopep8
