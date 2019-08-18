@@ -41,6 +41,5 @@
     - "python-autopep8"
     - "atom-beautify"
     - "atom-ternjs"
-    - "remote-edit"
   tags:
     - caskapps
