@@ -26,6 +26,7 @@
   with_items:
     - "language-babel"
     - "editorconfig"
+    - "linter-ui-default"
     - "linter"
     - "linter-eslint"
     - "linter-flake8"
@@ -38,11 +39,7 @@
     - "script"
     - "prettier-atom"
     - "python-autopep8"
-    - "atom-react"
-    - "react-es7-snippets"
-    - "atom-jest-snippets"
     - "atom-beautify"
     - "atom-ternjs"
-    - "one-dark-ui"
   tags:
     - caskapps
