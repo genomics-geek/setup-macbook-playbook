@@ -24,7 +24,7 @@
 - name: install Atom packaages
   shell: "apm install {{ item }}"
   with_items:
-    - "react"
+    - "language-babel"
     - "editorconfig"
     - "linter-ui-default"
     - "linter"
