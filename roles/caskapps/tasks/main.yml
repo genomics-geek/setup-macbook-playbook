@@ -41,5 +41,6 @@
     - "python-autopep8"
     - "atom-beautify"
     - "atom-ternjs"
+    - "language-wdl"
   tags:
     - caskapps
