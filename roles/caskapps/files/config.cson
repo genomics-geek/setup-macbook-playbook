@@ -1,0 +1,41 @@
+"*":
+  "autocomplete-python":
+    useKite: false
+  core:
+    customFileTypes:
+      "source.js.jsx": [
+        "js"
+      ]
+    disabledPackages: [
+      "markdown-preview"
+    ]
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
+  "git-plus":
+    general: {}
+  "language-babel":
+    autoIndentJSX: true
+  "linter-ui-default":
+    showPanel: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+      isDisabledIfNotInPackageJson: true
+      showInStatusBar: true
+    prettierEslintOptions:
+      prettierLast: true
+  "python-autopep8":
+    formatOnSave: true
+".babel.regexp.source":
+  editor:
+    scrollPastEnd: true
+".css.source.styled":
+  editor:
+    scrollPastEnd: true
+".js.jsx.source":
+  editor:
+    scrollPastEnd: true
+".languagebabel.ttlextension":
+  editor:
+    scrollPastEnd: true

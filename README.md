@@ -81,3 +81,4 @@ This will setup a new laptop for software development.
 + linters for python and JS
 + prettier
 + python-autopep8
++ language support for WDL, JSX, Python

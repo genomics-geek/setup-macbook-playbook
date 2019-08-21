@@ -21,13 +21,15 @@
   tags:
     - caskapps
 
-- name: install Atom packaages
+- name: install Atom packages
   shell: "apm install {{ item }}"
   with_items:
     - "language-babel"
+    - "language-wdl"
+    - "atom-jinja2"
     - "editorconfig"
-    - "linter-ui-default"
     - "linter"
+    - "linter-ui-default"
     - "linter-eslint"
     - "linter-flake8"
     - "teletype"
@@ -35,12 +37,18 @@
     - "highlight-selected"
     - "file-icons"
     - "ask-stack"
-    - "autocomplete-python"
     - "script"
+    - "autocomplete-python"
+    - "autocomplete-modules"
     - "prettier-atom"
     - "python-autopep8"
-    - "atom-beautify"
-    - "atom-ternjs"
-    - "language-wdl"
+    - "markdown-preview-plus"
+  tags:
+    - caskapps
+
+- name: Copy Atom configuration file
+  copy:
+    src: "{{ role_path }}/files/config.cson"
+    dest: "{{ lookup('env','HOME') }}/.atom/config.cson"
   tags:
     - caskapps
