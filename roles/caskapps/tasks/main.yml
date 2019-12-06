@@ -52,3 +52,29 @@
     dest: "{{ lookup('env','HOME') }}/.atom/config.cson"
   tags:
     - caskapps
+
+- name: install VSCode packages
+  shell: "code --install-extension {{ item }}"
+  with_items:
+    - "ms-python.python"
+    - "ms-vscode.go"
+    - "broadinstitute.wdl"
+    - "broadinstitute.wdl-devtools"
+    - "msjsdiag.debugger-for-chrome"
+    - "formulahendry.code-runner"
+    - "vscode-icons-team.vscode-icons"
+    - "eamodio.gitlens"
+    - "dbaeumer.vscode-eslint"
+    - "esbenp.prettier-vscode"
+    - "editorconfig.editorconfig"
+    - "formulahendry.auto-close-tag"
+    - "formulahendry.auto-rename-tag"
+    - "coenraads.bracket-pair-colorizer"
+    - "christian-kohler.npm-intellisense"
+    - "christian-kohler.path-intellisense"
+    - "eg2.vscode-npm-script"
+    - "pflannery.vscode-versionlens"
+    - "streetsidesoftware.code-spell-checker"
+    - "apollographql.vscode-apollo"
+  tags:
+    - caskapps
