@@ -1,4 +1,12 @@
 ---
+- name: Create directory for installed apps
+  file:
+    path: "{{ lookup('env','HOME') }}/Applications"
+    state: directory
+    mode: 0775
+  tags:
+    - caskapps
+
 - name: install cask apps
   homebrew_cask:
     name: "{{ item }}"
@@ -7,7 +15,6 @@
   with_items:
     - "slack"
     - "skype"
-    - "atom"
     - "vscodium"
     - "postman"
     - "github"
@@ -15,41 +22,8 @@
     - "google-drive-file-stream"
     - "google-chrome"
     - "spotify"
-    - "spotify-notifications"
     - "dbvisualizer"
     - "lastpass"
-  tags:
-    - caskapps
-
-- name: install Atom packages
-  shell: "apm install {{ item }}"
-  with_items:
-    - "language-babel"
-    - "language-wdl"
-    - "atom-jinja2"
-    - "editorconfig"
-    - "linter"
-    - "linter-ui-default"
-    - "linter-eslint"
-    - "linter-flake8"
-    - "teletype"
-    - "git-plus"
-    - "highlight-selected"
-    - "file-icons"
-    - "ask-stack"
-    - "script"
-    - "autocomplete-python"
-    - "autocomplete-modules"
-    - "prettier-atom"
-    - "python-autopep8"
-    - "markdown-preview-plus"
-  tags:
-    - caskapps
-
-- name: Copy Atom configuration file
-  copy:
-    src: "{{ role_path }}/files/config.cson"
-    dest: "{{ lookup('env','HOME') }}/.atom/config.cson"
   tags:
     - caskapps
 

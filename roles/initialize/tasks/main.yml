@@ -10,7 +10,7 @@
     state: present
   with_items:
     - "homebrew/services"
-    - "caskroom/cask"
+    - "homebrew/cask"
     - "heroku/brew"
   tags:
     - initialize
@@ -60,11 +60,3 @@
     chdir: "{{ lookup('env','HOME') }}/.dotfiles"
   tags:
     - initialize
-
-- name: Create directory for installed apps
-  file:
-    path: "{{ lookup('env','HOME') }}/Applications"
-    state: directory
-    mode: 0775
-  tags:
-    - caskapps
