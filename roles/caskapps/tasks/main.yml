@@ -33,6 +33,7 @@
   with_items:
     - "ms-python.python"
     - "ms-vscode.go"
+    - "ms-vscode-remote.vscode-remote-extensionpack"
     - "broadinstitute.wdl"
     - "broadinstitute.wdl-devtools"
     - "msjsdiag.debugger-for-chrome"
@@ -48,8 +49,9 @@
     - "christian-kohler.npm-intellisense"
     - "christian-kohler.path-intellisense"
     - "eg2.vscode-npm-script"
-    - "pflannery.vscode-versionlens"
+    # - "pflannery.vscode-versionlens"
     - "streetsidesoftware.code-spell-checker"
     - "apollographql.vscode-apollo"
+    - "shan.code-settings-sync"
   tags:
     - caskapps
