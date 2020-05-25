@@ -15,7 +15,7 @@
   with_items:
     - "slack"
     - "skype"
-    - "vscodium"
+    - "visual-studio-code"
     - "postman"
     - "github"
     - "brave-browser"
