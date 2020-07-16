@@ -3,6 +3,7 @@
   homebrew:
     name: [
       "unixodbc",
+      "psqlodbc",
       "postgresql",
       "mysql",
       "redis",
