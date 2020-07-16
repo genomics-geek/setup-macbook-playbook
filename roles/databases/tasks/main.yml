@@ -2,6 +2,7 @@
 - name: install databases
   homebrew:
     name: [
+      "unixodbc",
       "postgresql",
       "mysql",
       "redis",
