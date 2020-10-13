@@ -16,6 +16,14 @@
   with_items:
     - "adoptopenjdk"
 
+- name: install cask anaconda
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+    install_options: "appdir=$HOME/Applications/"
+  with_items:
+    - "anaconda"
+
 - name: install erlang, scala, go, nim, and python3
   homebrew:
     name: [
